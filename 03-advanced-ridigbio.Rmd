@@ -1,0 +1,78 @@
+---
+title: "Advanced ridigbio"
+author: "Matthew Collins"
+date: "October 5, 2015"
+output: html_document
+---
+
+> ## Learning Objectives
+>
+> * Filter and select data using ridigbio
+> * Read API documentation
+> * Broaden understanding of API and package posabilities
+
+## Using ridigbio and the API to do it
+
+The CSV file we just wrote probably only had one line in it when we finished 
+removing all the data we could not use. But, we had to download 10 records over
+the internet to get enough data to find one good record. What if we wanted 100 
+good records? How many would we need to download? Can we know?
+
+A better approach than filtering data yourself is to see if the API or R 
+package will do it for you. In the case of the iDigBio API and the R package,
+the answer is "yes!" And the filtering happens on the server at iDigBio so only
+good records are transfered to you.
+
+### Reading the Documentation
+
+In order to know how to use ridigbio to filter out the records we don't want,
+we need to read the documentation for the package. In R, you can put a `?`
+(question mark) in front of a package or function name on the console line.
+In the lower right section, the Help tab will open to help for the function.
+
+```{r, eval=FALSE, purl=FALSE}
+?ridigbio
+?idig_search_records
+```
+
+The most useful parameter to the function is `rq` which is "iDigBio query in
+nested list format". Later in the help page there is a link to the specification
+for this format:
+
+[https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format](https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format)
+
+You may recognize this query format as a JSON object. Recall that the iDigBio
+API takes JSON and returns JSON.
+
+### Constructing a JSON object in R
+
+```{r, eval=FALSE, purl=FALSE}
+query <- list(scientificname=list(type="exists"), 
+              geopoint=list(type="exists"),
+              genus="acer")
+```
+
+### Requiring a Field to be Populated
+
+```{r, eval=FALSE, purl=FALSE}
+df <- idig_search_records(limit=10, rq=query)
+```
+
+### Limiting the Columns Returned
+
+```{r, eval=FALSE, purl=FALSE}
+field_list <- c("scientificname", "geopoint")
+df <- idig_search_records(limit=10, rq=query, fields=field_list)
+```
+
+## Bonus: Everyone has an API and a package
+
+Data access APIs and packages in R are common. If you want some kind of data,
+try seeing if the data provider has an API or package for your favorite
+programming language.
+
+Some ideas:
+
+1. [rOpenSci](https://ropensci.org/packages/)
+1. [Machine learning on CRAN](https://cran.r-project.org/web/views/MachineLearning.html)
+1. [Bioconductor distribution for bioinformatics](https://www.bioconductor.org/)

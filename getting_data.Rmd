@@ -24,19 +24,5 @@ The lesson is written as a narative that can be read without an instructor if de
 
 
 
-03-advanced-ridigbio
-
-## Using the API to do it
-
-### Reading the Documentation
-
-### Constructing a JSON object in R
-
-### Limiting the Columns Returned
-
-### Requiring a Field to be Populated
-
-## Bonus: Using a Loop
-## Bonus: Everyone has an API and a package
 
 60 minutes after lunch
