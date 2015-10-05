@@ -18,35 +18,13 @@ The lesson is written as a narative that can be read without an instructor if de
 > * Write CSV files
 > * Experiment with using an API to get exactly the data you want
 
+# Sections
 
 * [Before we start](00-before-we-start.html)
 
-## R Studio
-c-n-p from DC intro
 
-## Using Occurrence Data from iDigBio for SDM
 
-## A Brief Description of Packages for R
-
-## The ridigbio Package
-
-### iDigBio API
-
-### Downloading Data
-
-## Cleaning Data
-
-### Selecting only Specific Columns
-
-### Selecting only specific Rows
-
-#### Remove no Identification
-
-#### Remove no Georeference
-
-## Sorting and Subsetting by Species
-
-## Saving a DataFrame as a CSV
+03-advanced-ridigbio
 
 ## Using the API to do it
 
@@ -59,5 +37,6 @@ c-n-p from DC intro
 ### Requiring a Field to be Populated
 
 ## Bonus: Using a Loop
+## Bonus: Everyone has an API and a package
 
 60 minutes after lunch
