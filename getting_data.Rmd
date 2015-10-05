@@ -1,0 +1,63 @@
+11:00 - 12:00 before lunch
+
+# Using Packages and Web APIs to Get Biodiversity Data
+
+This lesson has been prepared specially for the International Workshop on Building Collaboration in Biodiversity Informatics held at IPB in Bogor, Indonesia on 5/10/2015 - 7/10/2015.
+
+The lesson is written as a narative that can be read without an instructor if desired.
+
+[Workshop wiki](https://github.com/iDigBio/2015-10-05-PrePRAGMA/wiki)
+
+------------
+
+> ## Learning Objectives
+>
+> * Familiarize participants RStudio
+> * Use a package to fetch data from the internet
+> * Clean and subset data
+> * Write CSV files
+> * Experiment with using an API to get exactly the data you want
+
+
+* [Before we start](00-before-we-start.html)
+
+## R Studio
+c-n-p from DC intro
+
+## Using Occurrence Data from iDigBio for SDM
+
+## A Brief Description of Packages for R
+
+## The ridigbio Package
+
+### iDigBio API
+
+### Downloading Data
+
+## Cleaning Data
+
+### Selecting only Specific Columns
+
+### Selecting only specific Rows
+
+#### Remove no Identification
+
+#### Remove no Georeference
+
+## Sorting and Subsetting by Species
+
+## Saving a DataFrame as a CSV
+
+## Using the API to do it
+
+### Reading the Documentation
+
+### Constructing a JSON object in R
+
+### Limiting the Columns Returned
+
+### Requiring a Field to be Populated
+
+## Bonus: Using a Loop
+
+60 minutes after lunch
