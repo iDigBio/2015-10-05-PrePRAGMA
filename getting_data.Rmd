@@ -21,8 +21,6 @@ The lesson is written as a narative that can be read without an instructor if de
 # Sections
 
 * [Before we start](00-before-we-start.html)
-
-
-
-
-60 minutes after lunch
+* [Using Occurence Data from iDigBio](01-occurrence-data.html)
+* [The ridigbio Package](02-ridigbio.html)
+* [Advanced ridigbio](03-advanced-ridigbio.html)
