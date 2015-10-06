@@ -239,10 +239,13 @@ results.
 Here is the actual documentation for the API request we've been making:
 
 ---
+
 ### Top-N Records
+
 ```
 GET, POST /v2/summary/top/records/
 ```
+
 <table width="50%">
 <tr>
     <td>Parameter</td>

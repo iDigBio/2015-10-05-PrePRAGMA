@@ -241,6 +241,38 @@ helping us with collecting, education, and writing.
 <h2>Tying in documentation</h2>
 <p>Now that we know web APIs send HTTP requests and return JSON, let’s look at some documentation to see if we can craft some API calls and interpret the results.</p>
 <p>Here is the actual documentation for the API request we’ve been making:</p>
+<hr />
+<div id="top-n-records" class="section level3">
+<h3>Top-N Records</h3>
+<pre><code>GET, POST /v2/summary/top/records/</code></pre>
+<table width="50%">
+<tr>
+<pre><code>&lt;td&gt;Parameter&lt;/td&gt;
+&lt;td&gt;Description&lt;/td&gt;</code></pre>
+</tr>
+<tr>
+<pre><code>&lt;td&gt;rq&lt;/td&gt;
+&lt;td&gt;Search Query in [iDigBio Query </code></pre>
+Format](<a href="https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format" class="uri">https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format</a>), using <a href="https://github.com/iDigBio/idigbio-search-api/wiki/Index-Fields#record-%20query-fields">Record Query Fields</a>
+</td>
+</tr>
+<tr>
+<pre><code>&lt;td&gt;top_fields&lt;/td&gt;
+&lt;td&gt;a list of fields to return, specified using the fieldName parameter 
+from [Fields](https://github.com/iDigBio/idigbio-search-api/wiki#fields) </code></pre>
+with type records
+</td>
+</tr>
+<tr>
+<pre><code>&lt;td&gt;count&lt;/count&gt;
+&lt;td&gt;The number of top value to return&lt;/td&gt;</code></pre>
+</tr>
+</table>
+<p>Returns a custom JSON format containing the top-N (where n is specified with count) values for a given field. When multiple fields are supplied, the values will be nested inside each-other. This allows you to build field heirarchies. For example:</p>
+<pre><code>/v2/summary/top/records/?fields=[&quot;kingdom&quot;,&quot;phylum&quot;]&amp;count=10</code></pre>
+<p>Will return the top 10 kingdoms for all records, and the top 10 phylums for each kingdom.</p>
+<hr />
+</div>
 <div id="challenge-2" class="section level3">
 <h3>Challenge</h3>
 <blockquote>
